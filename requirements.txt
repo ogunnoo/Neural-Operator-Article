@@ -1,0 +1,9 @@
+# Neural-operator lid-driven-cavity experiment
+# Tested with Python 3.10 on macOS/arm64 (JAX CPU backend).
+numpy>=1.26,<3
+scipy>=1.11
+matplotlib>=3.8
+jax>=0.4.30
+jaxlib>=0.4.30
+flax>=0.8
+optax>=0.2

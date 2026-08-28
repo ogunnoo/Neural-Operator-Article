@@ -1,0 +1,56 @@
+[dataset] loading cached CFD data: cavity_dataset_6a0c599e1d.npz
+[train] backend=cpu devices=[CpuDevice(id=0)]
+[train] fit functions=56  val functions=8  grid points=1681  supervised targets=188,272
+[train] steps=120,000  points/step=1681
+[train] DeepONet parameters: 284,282
+[train] step    250  mse(norm) 4.4862e-01  val relL2 19.2978%  lr 2.32e-04  5s
+[train] step   2500  mse(norm) 3.0821e-03  val relL2 7.6928%  lr 1.42e-03  40s
+[train] step   5000  mse(norm) 2.4462e-03  val relL2 2.0726%  lr 2.00e-03  86s
+[train] step   7500  mse(norm) 1.4583e-03  val relL2 1.2206%  lr 1.99e-03  138s
+[train] step  10000  mse(norm) 1.7020e-04  val relL2 1.0050%  lr 1.99e-03  185s
+[train] step  12500  mse(norm) 2.8458e-04  val relL2 1.4720%  lr 1.97e-03  231s
+[train] step  15000  mse(norm) 5.8901e-05  val relL2 0.8802%  lr 1.95e-03  279s
+[train] step  17500  mse(norm) 6.7621e-05  val relL2 1.0456%  lr 1.93e-03  326s
+[train] step  20000  mse(norm) 1.2663e-04  val relL2 1.0805%  lr 1.90e-03  375s
+[train] step  22500  mse(norm) 8.2019e-05  val relL2 0.7234%  lr 1.87e-03  422s
+[train] step  25000  mse(norm) 4.1971e-05  val relL2 0.8995%  lr 1.84e-03  473s
+[train] step  27500  mse(norm) 1.0509e-04  val relL2 1.7497%  lr 1.80e-03  522s
+[train] step  30000  mse(norm) 6.5914e-05  val relL2 0.7337%  lr 1.76e-03  569s
+[train] step  32500  mse(norm) 8.9516e-05  val relL2 0.6913%  lr 1.71e-03  618s
+[train] step  35000  mse(norm) 1.1375e-04  val relL2 0.8783%  lr 1.66e-03  671s
+[train] step  37500  mse(norm) 4.4019e-05  val relL2 0.5864%  lr 1.61e-03  719s
+[train] step  40000  mse(norm) 6.1714e-05  val relL2 0.9159%  lr 1.56e-03  765s
+[train] step  42500  mse(norm) 5.1867e-05  val relL2 0.4793%  lr 1.50e-03  812s
+[train] step  45000  mse(norm) 4.4084e-05  val relL2 0.7987%  lr 1.44e-03  859s
+[train] step  47500  mse(norm) 5.7099e-05  val relL2 2.2757%  lr 1.38e-03  905s
+[train] step  50000  mse(norm) 5.3646e-05  val relL2 0.6697%  lr 1.32e-03  952s
+[train] step  52500  mse(norm) 3.2778e-05  val relL2 1.0149%  lr 1.25e-03  999s
+[train] step  55000  mse(norm) 4.3775e-05  val relL2 0.6577%  lr 1.19e-03  1045s
+[train] step  57500  mse(norm) 4.1996e-05  val relL2 0.6017%  lr 1.12e-03  1454s
+[train] step  60000  mse(norm) 3.2242e-05  val relL2 0.6797%  lr 1.05e-03  1491s
+[train] step  62500  mse(norm) 2.5591e-05  val relL2 0.4180%  lr 9.86e-04  1587s
+[train] step  65000  mse(norm) 1.9931e-05  val relL2 0.4463%  lr 9.19e-04  1638s
+[train] step  67500  mse(norm) 1.8864e-05  val relL2 0.6182%  lr 8.53e-04  1689s
+[train] step  70000  mse(norm) 1.7616e-05  val relL2 0.4792%  lr 7.87e-04  1737s
+[train] step  72500  mse(norm) 1.3862e-05  val relL2 0.8636%  lr 7.22e-04  1786s
+[train] step  75000  mse(norm) 1.0198e-05  val relL2 0.5715%  lr 6.58e-04  1834s
+[train] step  77500  mse(norm) 7.4871e-06  val relL2 0.3815%  lr 5.96e-04  1882s
+[train] step  80000  mse(norm) 6.3565e-06  val relL2 0.2841%  lr 5.36e-04  1931s
+[train] step  82500  mse(norm) 6.0678e-06  val relL2 0.2842%  lr 4.78e-04  1979s
+[train] step  85000  mse(norm) 4.0262e-06  val relL2 0.2608%  lr 4.22e-04  2028s
+[train] step  87500  mse(norm) 3.2428e-06  val relL2 0.2644%  lr 3.69e-04  2079s
+[train] step  90000  mse(norm) 2.6644e-06  val relL2 0.2169%  lr 3.19e-04  2126s
+[train] step  92500  mse(norm) 2.0625e-06  val relL2 0.2522%  lr 2.72e-04  2156s
+[train] step  95000  mse(norm) 1.4833e-06  val relL2 0.2462%  lr 2.28e-04  2187s
+[train] step  97500  mse(norm) 1.1803e-06  val relL2 0.1993%  lr 1.88e-04  2216s
+[train] step 100000  mse(norm) 9.6264e-07  val relL2 0.1731%  lr 1.51e-04  2244s
+[train] step 102500  mse(norm) 7.1958e-07  val relL2 0.1689%  lr 1.19e-04  2274s
+[train] step 105000  mse(norm) 6.0189e-07  val relL2 0.1621%  lr 9.04e-05  2321s
+[train] step 107500  mse(norm) 5.0361e-07  val relL2 0.1592%  lr 6.61e-05  2350s
+[train] step 110000  mse(norm) 4.3135e-07  val relL2 0.1593%  lr 4.60e-05  2379s
+[train] step 112500  mse(norm) 3.9510e-07  val relL2 0.1509%  lr 3.03e-05  2408s
+[train] step 115000  mse(norm) 3.7114e-07  val relL2 0.1479%  lr 1.90e-05  2438s
+[train] step 117500  mse(norm) 3.5576e-07  val relL2 0.1453%  lr 1.23e-05  2467s
+[train] step 120000  mse(norm) 3.4356e-07  val relL2 0.1436%  lr 1.00e-05  2496s
+[train] done in 2496s; best val relL2 0.1433% at step 119750; saved deeponet_cavity_A.msgpack
+[_A] best_val 0.1433% at step 119750 in 2497s

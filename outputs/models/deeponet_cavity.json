@@ -1,0 +1,8 @@
+{
+  "latent": 128,
+  "branch_hidden": 128,
+  "branch_depth": 3,
+  "trunk_hidden": 160,
+  "trunk_depth": 4,
+  "n_sensors": 41
+}

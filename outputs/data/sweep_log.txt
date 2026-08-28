@@ -1,0 +1,30 @@
+[1/10] best_val 1.2031% (step 30000) final_val 1.2031% params 190,402 117.2s :: {'steps': 30000, 'points_per_step': 512, 'lr': 0.001, 'weight_decay': 0.0001, 'latent': 128, 'branch_hidden': 128, 'branch_depth': 3, 'trunk_hidden': 160, 'trunk_depth': 4}
+[2/10] best_val 1.5467% (step 29750) final_val 1.5477% params 190,402 275.4s :: {'steps': 30000, 'points_per_step': 1681, 'lr': 0.001, 'weight_decay': 0.0001, 'latent': 128, 'branch_hidden': 128, 'branch_depth': 3, 'trunk_hidden': 160, 'trunk_depth': 4}
+[3/10] best_val 0.8594% (step 58750) final_val 0.8628% params 190,402 231.9s :: {'steps': 60000, 'points_per_step': 512, 'lr': 0.001, 'weight_decay': 0.0001, 'latent': 128, 'branch_hidden': 128, 'branch_depth': 3, 'trunk_hidden': 160, 'trunk_depth': 4}
+[4/10] best_val 0.8860% (step 59750) final_val 0.8866% params 190,402 502.2s :: {'steps': 60000, 'points_per_step': 1681, 'lr': 0.001, 'weight_decay': 0.0001, 'latent': 128, 'branch_hidden': 128, 'branch_depth': 3, 'trunk_hidden': 160, 'trunk_depth': 4}
+[5/10] best_val 0.2552% (step 60000) final_val 0.2552% params 190,402 667.1s :: {'steps': 60000, 'points_per_step': 1681, 'lr': 0.002, 'weight_decay': 0.0001, 'latent': 128, 'branch_hidden': 128, 'branch_depth': 3, 'trunk_hidden': 160, 'trunk_depth': 4}
+[6/10] best_val 0.7380% (step 60000) final_val 0.7380% params 190,402 562.9s :: {'steps': 60000, 'points_per_step': 1681, 'lr': 0.001, 'weight_decay': 0.001, 'latent': 128, 'branch_hidden': 128, 'branch_depth': 3, 'trunk_hidden': 160, 'trunk_depth': 4}
+[7/10] best_val 0.3840% (step 60000) final_val 0.3840% params 326,522 976.4s :: {'steps': 60000, 'points_per_step': 1681, 'lr': 0.001, 'weight_decay': 0.0001, 'latent': 192, 'branch_hidden': 128, 'branch_depth': 3, 'trunk_hidden': 200, 'trunk_depth': 5}
+[8/10] best_val 0.9945% (step 59250) final_val 0.9948% params 153,282 544.4s :: {'steps': 60000, 'points_per_step': 1681, 'lr': 0.001, 'weight_decay': 0.0001, 'latent': 64, 'branch_hidden': 128, 'branch_depth': 3, 'trunk_hidden': 160, 'trunk_depth': 4}
+[9/10] best_val 0.8152% (step 33250) final_val 0.8374% params 381,498 902.8s :: {'steps': 60000, 'points_per_step': 1681, 'lr': 0.001, 'weight_decay': 0.0001, 'latent': 128, 'branch_hidden': 192, 'branch_depth': 4, 'trunk_hidden': 200, 'trunk_depth': 5}
+[10/10] best_val 0.2309% (step 120000) final_val 0.2309% params 284,282 1563.8s :: {'steps': 120000, 'points_per_step': 1681, 'lr': 0.001, 'weight_decay': 0.0001, 'latent': 128, 'branch_hidden': 128, 'branch_depth': 3, 'trunk_hidden': 200, 'trunk_depth': 5}
+
+BEST: {
+  "cfg": {
+    "steps": 120000,
+    "points_per_step": 1681,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "latent": 128,
+    "branch_hidden": 128,
+    "branch_depth": 3,
+    "trunk_hidden": 200,
+    "trunk_depth": 5
+  },
+  "best_val": 0.0023087417165466016,
+  "best_step": 120000,
+  "final_val": 0.0023087417165466016,
+  "final_mse": 2.5395183911314234e-07,
+  "n_params": 284282,
+  "seconds": 1563.8
+}

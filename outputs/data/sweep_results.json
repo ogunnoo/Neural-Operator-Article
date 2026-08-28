@@ -1,0 +1,192 @@
+[
+  {
+    "cfg": {
+      "steps": 120000,
+      "points_per_step": 1681,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "latent": 128,
+      "branch_hidden": 128,
+      "branch_depth": 3,
+      "trunk_hidden": 200,
+      "trunk_depth": 5
+    },
+    "best_val": 0.0023087417165466016,
+    "best_step": 120000,
+    "final_val": 0.0023087417165466016,
+    "final_mse": 2.5395183911314234e-07,
+    "n_params": 284282,
+    "seconds": 1563.8
+  },
+  {
+    "cfg": {
+      "steps": 60000,
+      "points_per_step": 1681,
+      "lr": 0.002,
+      "weight_decay": 0.0001,
+      "latent": 128,
+      "branch_hidden": 128,
+      "branch_depth": 3,
+      "trunk_hidden": 160,
+      "trunk_depth": 4
+    },
+    "best_val": 0.002551976164665688,
+    "best_step": 60000,
+    "final_val": 0.002551976164665688,
+    "final_mse": 5.250438448456407e-07,
+    "n_params": 190402,
+    "seconds": 667.1
+  },
+  {
+    "cfg": {
+      "steps": 60000,
+      "points_per_step": 1681,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "latent": 192,
+      "branch_hidden": 128,
+      "branch_depth": 3,
+      "trunk_hidden": 200,
+      "trunk_depth": 5
+    },
+    "best_val": 0.0038396606106518745,
+    "best_step": 60000,
+    "final_val": 0.0038396606106518745,
+    "final_mse": 4.369638588741509e-07,
+    "n_params": 326522,
+    "seconds": 976.4
+  },
+  {
+    "cfg": {
+      "steps": 60000,
+      "points_per_step": 1681,
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "latent": 128,
+      "branch_hidden": 128,
+      "branch_depth": 3,
+      "trunk_hidden": 160,
+      "trunk_depth": 4
+    },
+    "best_val": 0.00737989967786709,
+    "best_step": 60000,
+    "final_val": 0.00737989967786709,
+    "final_mse": 1.1373571169315255e-06,
+    "n_params": 190402,
+    "seconds": 562.9
+  },
+  {
+    "cfg": {
+      "steps": 60000,
+      "points_per_step": 1681,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "latent": 128,
+      "branch_hidden": 192,
+      "branch_depth": 4,
+      "trunk_hidden": 200,
+      "trunk_depth": 5
+    },
+    "best_val": 0.00815188614395677,
+    "best_step": 33250,
+    "final_val": 0.008374409001827461,
+    "final_mse": 3.9417076891368197e-07,
+    "n_params": 381498,
+    "seconds": 902.8
+  },
+  {
+    "cfg": {
+      "steps": 60000,
+      "points_per_step": 512,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "latent": 128,
+      "branch_hidden": 128,
+      "branch_depth": 3,
+      "trunk_hidden": 160,
+      "trunk_depth": 4
+    },
+    "best_val": 0.008594366806325127,
+    "best_step": 58750,
+    "final_val": 0.008628141704847778,
+    "final_mse": 1.3773792488791514e-06,
+    "n_params": 190402,
+    "seconds": 231.9
+  },
+  {
+    "cfg": {
+      "steps": 60000,
+      "points_per_step": 1681,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "latent": 128,
+      "branch_hidden": 128,
+      "branch_depth": 3,
+      "trunk_hidden": 160,
+      "trunk_depth": 4
+    },
+    "best_val": 0.00885992319651945,
+    "best_step": 59750,
+    "final_val": 0.00886554682002956,
+    "final_mse": 1.0392255944680073e-06,
+    "n_params": 190402,
+    "seconds": 502.2
+  },
+  {
+    "cfg": {
+      "steps": 60000,
+      "points_per_step": 1681,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "latent": 64,
+      "branch_hidden": 128,
+      "branch_depth": 3,
+      "trunk_hidden": 160,
+      "trunk_depth": 4
+    },
+    "best_val": 0.009944811752108474,
+    "best_step": 59250,
+    "final_val": 0.009947676407637369,
+    "final_mse": 1.4630452369601699e-06,
+    "n_params": 153282,
+    "seconds": 544.4
+  },
+  {
+    "cfg": {
+      "steps": 30000,
+      "points_per_step": 512,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "latent": 128,
+      "branch_hidden": 128,
+      "branch_depth": 3,
+      "trunk_hidden": 160,
+      "trunk_depth": 4
+    },
+    "best_val": 0.012030594752462882,
+    "best_step": 30000,
+    "final_val": 0.012030594752462882,
+    "final_mse": 6.855093943158863e-06,
+    "n_params": 190402,
+    "seconds": 117.2
+  },
+  {
+    "cfg": {
+      "steps": 30000,
+      "points_per_step": 1681,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "latent": 128,
+      "branch_hidden": 128,
+      "branch_depth": 3,
+      "trunk_hidden": 160,
+      "trunk_depth": 4
+    },
+    "best_val": 0.015467155828653805,
+    "best_step": 29750,
+    "final_val": 0.01547662902302438,
+    "final_mse": 5.1593488024082035e-06,
+    "n_params": 190402,
+    "seconds": 275.4
+  }
+]

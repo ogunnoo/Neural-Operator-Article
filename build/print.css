@@ -1,0 +1,154 @@
+@page {
+  size: A4;
+  margin: 20mm 18mm 20mm 18mm;
+}
+
+html { font-size: 10.5pt; }
+
+body {
+  font-family: "Charter", "Palatino", "Georgia", serif;
+  line-height: 1.55;
+  color: #14171a;
+  max-width: none;
+  margin: 0;
+  hyphens: auto;
+  text-align: left;
+}
+
+/* ---------- Title block ---------- */
+h1.title {
+  font-size: 25pt;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.15em 0;
+  padding-bottom: 0.35em;
+  border-bottom: 2.5px solid #14171a;
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  break-after: avoid-page;
+  page-break-after: avoid;
+}
+
+h2 {
+  font-size: 15pt;
+  margin: 1.9em 0 0.6em;
+  padding-bottom: 0.22em;
+  border-bottom: 1px solid #d4d8dd;
+  break-before: auto;
+}
+
+h3 {
+  font-size: 11.8pt;
+  margin: 1.5em 0 0.45em;
+  color: #2a2f36;
+}
+
+p { margin: 0 0 0.75em; orphans: 3; widows: 3; }
+
+/* ---------- Links ---------- */
+a { color: #0b5aa8; text-decoration: none; }
+
+/* ---------- Code ---------- */
+code {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.855em;
+  background: #f2f4f6;
+  padding: 0.12em 0.34em;
+  border-radius: 3px;
+  border: 1px solid #e3e7ea;
+}
+
+pre {
+  background: #f7f9fa;
+  border: 1px solid #dfe4e8;
+  border-left: 3px solid #6b7885;
+  border-radius: 4px;
+  padding: 0.75em 0.9em;
+  font-size: 8.6pt;
+  line-height: 1.45;
+  overflow-x: auto;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+pre code { background: none; border: none; padding: 0; font-size: inherit; }
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0 1.2em;
+  font-size: 9.1pt;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+caption { caption-side: top; text-align: left; font-size: 8.8pt;
+          color: #5a636d; padding-bottom: 0.4em; }
+th {
+  background: #eef1f4;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 620;
+  text-align: left;
+  padding: 0.42em 0.6em;
+  border-bottom: 1.6px solid #aeb6bf;
+  border-top: 1px solid #aeb6bf;
+}
+td { padding: 0.38em 0.6em; border-bottom: 1px solid #e4e8ec; vertical-align: top; }
+tbody tr:nth-child(even) { background: #fafbfc; }
+/* numeric-looking columns read better right-aligned */
+td:not(:first-child), th:not(:first-child) { text-align: right; }
+td:first-child, th:first-child { text-align: left; }
+
+/* ---------- Figures ---------- */
+figure {
+  margin: 1.2em 0 1.4em;
+  text-align: center;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #e0e4e8;
+  border-radius: 3px;
+}
+figcaption {
+  font-size: 8.7pt;
+  color: #5a636d;
+  margin-top: 0.5em;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ---------- Blockquote (the PINN/operator slogan) ---------- */
+blockquote {
+  margin: 1.1em 0;
+  padding: 0.7em 1.1em;
+  background: #f4f7fa;
+  border-left: 3.5px solid #2c6fb5;
+  border-radius: 0 4px 4px 0;
+  font-size: 1.02em;
+  break-inside: avoid-page;
+}
+blockquote p { margin: 0; }
+
+/* ---------- Rules: used as section separators ---------- */
+hr { border: none; border-top: 1px solid #dfe3e7; margin: 1.8em 0; }
+
+/* ---------- Math ---------- */
+.katex { font-size: 1.03em; }
+.katex-display {
+  margin: 0.9em 0;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+.katex-display > .katex { white-space: normal; }
+
+/* Lists */
+ul, ol { margin: 0 0 0.8em; padding-left: 1.5em; }
+li { margin-bottom: 0.28em; }

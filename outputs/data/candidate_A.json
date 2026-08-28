@@ -1,0 +1,18 @@
+{
+  "tag": "_A",
+  "cfg": {
+    "steps": 120000,
+    "points_per_step": 1681,
+    "lr": 0.002,
+    "weight_decay": 0.0001,
+    "latent": 128,
+    "branch_hidden": 128,
+    "branch_depth": 3,
+    "trunk_hidden": 200,
+    "trunk_depth": 5
+  },
+  "best_val": 0.001433127634456519,
+  "best_step": 119750,
+  "seconds": 2495.7787148952484,
+  "n_params": 284282
+}

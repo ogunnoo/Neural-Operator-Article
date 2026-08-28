@@ -1,0 +1,18 @@
+[dataset] loading cached CFD data: cavity_dataset_16e72c1206.npz
+[train] backend=cpu devices=[CpuDevice(id=0)]
+[train] fit functions=42  val functions=6  points/function=1681  rows=70,602  steps/epoch=8
+[train] DeepONet parameters: 244,194
+[train] epoch     1  mse(norm) 9.9111e-01  val relL2 96.5702%  lr 2.00e-03  1s
+[train] epoch   250  mse(norm) 1.1384e-03  val relL2 5.1998%  lr 1.97e-03  166s
+[train] epoch   500  mse(norm) 1.0987e-03  val relL2 3.4473%  lr 1.87e-03  299s
+[train] epoch   750  mse(norm) 7.5894e-03  val relL2 12.0234%  lr 1.71e-03  401s
+[train] epoch  1000  mse(norm) 1.5567e-03  val relL2 8.8832%  lr 1.50e-03  502s
+[train] epoch  1250  mse(norm) 7.3868e-04  val relL2 8.2775%  lr 1.26e-03  722s
+[train] epoch  1500  mse(norm) 2.5246e-04  val relL2 6.5989%  lr 1.01e-03  962s
+[train] epoch  1750  mse(norm) 4.7310e-04  val relL2 6.1261%  lr 7.47e-04  1412s
+[train] epoch  2000  mse(norm) 1.4605e-04  val relL2 5.9585%  lr 5.07e-04  1612s
+[train] epoch  2250  mse(norm) 5.2327e-05  val relL2 5.4590%  lr 3.01e-04  1719s
+[train] epoch  2500  mse(norm) 2.4503e-05  val relL2 5.4478%  lr 1.43e-04  1823s
+[train] epoch  2750  mse(norm) 1.8247e-05  val relL2 5.4236%  lr 4.39e-05  1931s
+[train] epoch  3000  mse(norm) 1.6452e-05  val relL2 5.4261%  lr 1.00e-05  2080s
+[train] done in 2080s; best val relL2 2.3458% at epoch 675; saved deeponet_cavity.msgpack
