@@ -383,7 +383,8 @@ def fig_error_summary():
                [r["rel_l2_velocity"] * 100 for r in rows],
                s=42, color="C3", marker="s", label=f"held-out test ({len(rows)})",
                zorder=3, edgecolor="white", linewidth=0.6)
-    ax.set_xlabel("distance to nearest fitted lid function\n(relative $L_2$, %)")
+    ax.set_xlabel("distance to nearest fitted lid function\n"
+                  "(symmetric normalised $L_2$, %)")
     ax.set_ylabel("relative $L_2$ velocity error (%)")
     # Report the actual rank correlation rather than asserting a clean trend:
     # it is strong but has visible exceptions.

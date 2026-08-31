@@ -7,6 +7,7 @@
       "ref_max_abs_div": 3.9968028886505635e-15,
       "wall_max_abs_u": 0.000700459408108145,
       "wall_max_abs_v": 0.0005298078758642077,
+      "wall_max_speed": 0.0007375700515694916,
       "lid_max_abs_err": 0.03554796881358069,
       "speed_scale": 1.7374892205683414
     },
@@ -17,6 +18,7 @@
       "ref_max_abs_div": 1.887379141862766e-15,
       "wall_max_abs_u": 0.00047324851038865745,
       "wall_max_abs_v": 0.00033936972613446414,
+      "wall_max_speed": 0.00048146070912480354,
       "lid_max_abs_err": 0.002679684095328705,
       "speed_scale": 0.9228453381730675
     },
@@ -27,6 +29,7 @@
       "ref_max_abs_div": 1.7763568394002505e-15,
       "wall_max_abs_u": 0.0004768162907566875,
       "wall_max_abs_v": 0.00047715482651256025,
+      "wall_max_speed": 0.000614740012679249,
       "lid_max_abs_err": 0.017244481422528934,
       "speed_scale": 0.9698678054252076
     },
@@ -37,6 +40,7 @@
       "ref_max_abs_div": 3.885780586188048e-15,
       "wall_max_abs_u": 0.000859032676089555,
       "wall_max_abs_v": 0.0005080071277916431,
+      "wall_max_speed": 0.0008622988243587315,
       "lid_max_abs_err": 0.011894738765244606,
       "speed_scale": 1.3872293592410136
     },
@@ -47,6 +51,7 @@
       "ref_max_abs_div": 3.774758283725532e-15,
       "wall_max_abs_u": 0.0017173232045024633,
       "wall_max_abs_v": 0.000715813715942204,
+      "wall_max_speed": 0.0017196298576891422,
       "lid_max_abs_err": 0.03703499106121555,
       "speed_scale": 1.7019409186558017
     },
@@ -57,14 +62,19 @@
       "ref_max_abs_div": 1.942890293094024e-15,
       "wall_max_abs_u": 0.0006039566360414028,
       "wall_max_abs_v": 0.0007829173118807375,
+      "wall_max_speed": 0.0008123624720610678,
       "lid_max_abs_err": 0.016528464231148177,
       "speed_scale": 0.8593745820344427
     }
   ],
   "mean_pred_max_abs_div": 0.042545715967814125,
+  "mean_pred_rms_div": 0.0076977234954635305,
   "mean_ref_max_abs_div": 2.877328005486864e-15,
   "mean_wall_max_abs_u": 0.0008051394543144852,
+  "mean_wall_max_abs_v": 0.0005588450973543028,
+  "mean_wall_max_speed": 0.0008713436545804143,
   "mean_lid_max_abs_err": 0.020155054731507777,
   "mean_speed_scale": 1.2631245373496458,
-  "div_relative_to_speed_scale": 0.03368291463728967
+  "div_relative_to_speed_scale": 0.03368291463728967,
+  "rms_div_relative_to_speed_scale": 0.0060941920355813035
 }
