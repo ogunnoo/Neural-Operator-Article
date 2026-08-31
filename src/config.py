@@ -22,10 +22,10 @@ for _d in (FIGDIR, DATADIR, MODELDIR):
 @dataclass
 class Config:
     # ---------------- Physics / discretisation ----------------
-    # Reynolds number is FIXED for the whole study. The only thing that varies
-    # between samples is the lid velocity *function* g(x).  Re is defined with a
-    # reference lid speed U_ref = 1 and cavity size L = 1, so nu = 1/Re is
-    # literally identical for every sample in the dataset.
+    # The nondimensional PDE coefficient is fixed for the whole study. Re is
+    # defined with U_ref = L = 1, so nu = 1/Re is identical for every sample.
+    # Because the imposed lid amplitude varies, case-specific Reynolds scales
+    # based on actual peak or mean lid speed vary; report_numbers.py records both.
     re: float = 100.0
     n: int = 41                     # grid is n x n over the unit square
     cfl: float = 0.35               # safety factor on the explicit time step

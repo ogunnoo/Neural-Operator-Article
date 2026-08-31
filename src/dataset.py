@@ -66,8 +66,8 @@ def sample_coeffs(rng: np.random.Generator):
     The `shape_budget` rejection rule keeps |a1|+|a2|+|a3| <= 0.6 * a0, which
     guarantees the untapered profile stays positive (min >= 0.4 * a0 >= 0.32).
     The lid therefore always moves in one direction and the flow stays a single
-    primary vortex plus corner eddies -- physically sensible, and it keeps the
-    effective Reynolds number in a narrow band around the nominal Re = 100.
+    primary vortex plus corner eddies. The PDE coefficient Re=100 is fixed, but
+    Reynolds scales formed from each case's actual lid speed are not constant.
     """
     while True:
         a0 = rng.uniform(*CFG.a0_range)
@@ -76,8 +76,12 @@ def sample_coeffs(rng: np.random.Generator):
             return (float(a0), float(a1), float(a2), float(a3))
 
 
-def _rel_dist(g1: np.ndarray, g2: np.ndarray) -> float:
-    return float(np.linalg.norm(g1 - g2) / np.linalg.norm(g2))
+def function_distance(g1: np.ndarray, g2: np.ndarray) -> float:
+    """Symmetric normalised L2 distance between two sampled lid functions."""
+    return float(
+        2.0 * np.linalg.norm(g1 - g2)
+        / (np.linalg.norm(g1) + np.linalg.norm(g2))
+    )
 
 
 def build_function_family(rng: np.random.Generator, x: np.ndarray,
@@ -85,12 +89,13 @@ def build_function_family(rng: np.random.Generator, x: np.ndarray,
     """Draw training profiles, then held-out test profiles that are provably
     distinct from every training profile.
 
-    `min_sep` is a relative L2 distance in function space.  A candidate test
-    profile is rejected unless it is at least 12% away (relative L2) from every
+    `min_sep` is the symmetric normalised L2 distance
+    2||g1-g2||/(||g1||+||g2||). A candidate test profile is rejected unless it
+    is at least 12% away from every
     training profile *and* from every already-accepted test profile.  This is
-    what makes "unseen" mean something: the test lids are drawn from the same
-    distribution (so the claim stays about in-distribution generalisation) but
-    are not near-duplicates of anything the network was trained on.
+    what makes "unseen" mean something: the test lids remain within the same
+    four-coefficient support, but separation conditioning makes them a challenge
+    set rather than an IID sample from the base coefficient distribution.
     """
     train = [sample_coeffs(rng) for _ in range(n_train)]
     train_g = [lid_profile(x, c) for c in train]
@@ -103,9 +108,9 @@ def build_function_family(rng: np.random.Generator, x: np.ndarray,
             raise RuntimeError("could not find sufficiently separated test profiles")
         c = sample_coeffs(rng)
         g = lid_profile(x, c)
-        if min(_rel_dist(g, t) for t in train_g) < min_sep:
+        if min(function_distance(g, t) for t in train_g) < min_sep:
             continue
-        if test_g and min(_rel_dist(g, t) for t in test_g) < min_sep:
+        if test_g and min(function_distance(g, t) for t in test_g) < min_sep:
             continue
         test.append(c)
         test_g.append(g)

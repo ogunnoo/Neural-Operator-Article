@@ -16,7 +16,7 @@ import jax.numpy as jnp
 import numpy as np
 
 from .config import CFG, DATADIR, MODELDIR
-from .dataset import generate
+from .dataset import function_distance, generate
 from .deeponet import load_checkpoint, normalise_g
 
 
@@ -109,7 +109,7 @@ def main(verbose: bool = True):
     fit_g = data["train_g"][:n_fit]
 
     def nearest(g):
-        return float(min(np.linalg.norm(g - f) / np.linalg.norm(g) for f in fit_g))
+        return float(min(function_distance(g, f) for f in fit_g))
 
     val_sep = [nearest(g) for g in data["train_g"][n_fit:]]
     test_sep = [nearest(g) for g in data["test_g"]]
@@ -134,6 +134,7 @@ def main(verbose: bool = True):
         "test_dist_to_nearest_fit_lid": test_sep,
         "val_mean_separation": float(np.mean(val_sep)),
         "test_mean_separation": float(np.mean(test_sep)),
+        "distance_definition": "2*||g-f||_2/(||g||_2+||f||_2)",
     }
     (DATADIR / "test_metrics.json").write_text(json.dumps(summary, indent=2))
 

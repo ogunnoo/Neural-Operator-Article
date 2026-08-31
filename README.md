@@ -8,8 +8,10 @@ g(x)  --->  [ u(x,y), v(x,y) ]
 
 where `g(x)` is the horizontal velocity profile along the moving top lid of a 2D
 lid-driven cavity and `(u, v)` is the resulting steady interior velocity field.
-The Reynolds number is fixed at **Re = 100** throughout, so the only thing that
-varies across the dataset is the input *function*.
+The nondimensional PDE coefficient is fixed at **Re = 100** (`nu = 0.01`),
+while the boundary function varies within a four-coefficient smooth family.
+Because lid amplitude varies, Reynolds scales based on each case's actual lid
+speed are not constant.
 
 This is the companion experiment to an article contrasting **PINNs** (which
 learn one solution to one PDE instance) with **neural operators** (which learn a
@@ -106,24 +108,25 @@ minibatch sampling. The CFD dataset is cached under a hash of the settings that
 affect it, so changing a network hyperparameter does not trigger a CFD rerun.
 
 Model selection uses a validation split of the training pool. The 6 held-out
-test functions are not read until `src/evaluate.py` runs.
+test functions are not evaluated until `src/evaluate.py` runs.
 
 ## Headline results
 
 | | |
 |---|---|
 | Solver vs Ghia et al. (Re=100, 41×41) | 0.56% (u), 1.62% (v) relative L2 |
-| Training data | 56 lid functions, fixed Re=100 |
+| Training data | 56 lid functions, fixed `nu=0.01` |
 | Model | 190,402 parameters (branch 128×3, trunk 160×4, p=128) |
 | Training | 120k steps, ~35 min on CPU |
-| Mean error on 6 unseen lid functions | **1.28%** relative L2 velocity |
-| Inference vs CFD solve | ~1.8 ms vs ~478 ms (~270×) |
+| Mean error on 6 separated challenge lids | **1.28%** relative L2 velocity (median 1.59%) |
+| Inference vs CFD solve | ~1.9 ms vs ~498 ms (~260×) |
 
 One result worth highlighting, because it is the point of the article's
-"Where did the physics go?" section: the trained model reproduces the no-slip
-walls it was never told about (max wall velocity ~0.0008), but its outputs are
-**not** divergence-free — max |∇·u| ≈ 4.3e-2, against ~3e-15 for every
-reference field it trained on. Accurate in norm, wrong in structure. Run
+"Where did the physics go?" section: the trained model reproduces supervised
+boundary values accurately (mean maximum stationary-wall speed ~0.0009), but
+its outputs are **not** divergence-free — mean max |∇·u| ≈ 4.3e-2 and mean RMS
+divergence ≈ 7.7e-3, against ~3e-15 for the reference fields. Accurate in norm,
+wrong in structure. Run
 `python -m src.physics_check` to reproduce.
 
 ## Building the PDF
